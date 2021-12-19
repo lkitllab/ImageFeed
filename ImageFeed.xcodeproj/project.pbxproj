@@ -23,6 +23,7 @@
 		47856536276F633600A3841D /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47856535276F633600A3841D /* DataProvider.swift */; };
 		47856538276F642B00A3841D /* ImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47856537276F642B00A3841D /* ImageProvider.swift */; };
 		4785653A276F644500A3841D /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47856539276F644500A3841D /* ImageDownloader.swift */; };
+		4785653C276F6AE400A3841D /* Array+Exstension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4785653B276F6AE400A3841D /* Array+Exstension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		47856535276F633600A3841D /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		47856537276F642B00A3841D /* ImageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProvider.swift; sourceTree = "<group>"; };
 		47856539276F644500A3841D /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		4785653B276F6AE400A3841D /* Array+Exstension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Exstension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				47856530276F5F3800A3841D /* Dictionary+Exstension.swift */,
+				4785653B276F6AE400A3841D /* Array+Exstension.swift */,
 			);
 			path = Exstension;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 				4785652F276F5F2C00A3841D /* ImageCellModel.swift in Sources */,
 				47856531276F5F3800A3841D /* Dictionary+Exstension.swift in Sources */,
 				47856536276F633600A3841D /* DataProvider.swift in Sources */,
+				4785653C276F6AE400A3841D /* Array+Exstension.swift in Sources */,
 				478564FA276F1E2B00A3841D /* SceneDelegate.swift in Sources */,
 				47856533276F5F4100A3841D /* Configuration.swift in Sources */,
 				47856538276F642B00A3841D /* ImageProvider.swift in Sources */,
@@ -375,6 +379,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -386,7 +392,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -403,6 +409,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -414,7 +422,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

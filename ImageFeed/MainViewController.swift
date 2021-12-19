@@ -41,9 +41,9 @@ class MainViewController: UIViewController {
         
         vm.$cellModels
             .receive(on: RunLoop.main)
-            .sink(receiveValue: { [collectionView] _ in
-                collectionView.reloadData()
-            }).store(in: &cancellables)
+            .map {_ in ()}
+            .sink(receiveValue: collectionView.reloadData)
+            .store(in: &cancellables)
         
     }
     
@@ -56,7 +56,7 @@ class MainViewController: UIViewController {
         NSLayoutConstraint.activate([
             collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            collectionView.topAnchor.constraint(equalTo: view.topAnchor),
             collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
     }
@@ -68,7 +68,6 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
         return vm.cellModels.endIndex
     }
     
-    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -76,6 +75,7 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
         vm.currentIndex = indexPath
+        (cell as? ImageCell)?.vm = vm.cellModels[indexPath.row]
         return cell
     }
 }
